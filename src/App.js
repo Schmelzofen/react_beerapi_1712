@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Startseite from "./components/Startseite"
 import './App.scss';
-import React, { Component } from 'react';
+import React from 'react';
 import { BierUebersicht } from "./components/BierUebersicht"
 import BierZufall from "./components/BierZufall"
 import GetID from "./components/GetId"
