@@ -7,12 +7,12 @@ const Startseite = () => {
         <section className="startseite">
             <div className="allBeers">
                 <img src={allBeers} alt="allbeers" />
-                <Link className="link" to="/bieruebersicht">All Beers</Link>
+                <Link className="startLink" to="/bieruebersicht">All Beers</Link>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, a, eleifend vitae varius venenatis. </p>
             <div className="randomBeer">
                 <img src={oneBeer} alt="rndbeer" />
-                <Link className="link" to="/bierzufall">Random Beer</Link>
+                <Link className="startLink" to="/bierzufall">Random Beer</Link>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, a, eleifend vitae varius venenatis. </p>
 

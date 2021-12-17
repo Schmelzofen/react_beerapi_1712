@@ -8,32 +8,43 @@
   padding: 5% 5%;
   text-align: center;
 
-  h1,
-  p {
-    text-align: left;
+  Link {
+    font-size: 2rem;
   }
 
   p {
-    margin: 3% 0 10% 0;
+    margin: 5% 0 10% 0;
+    line-height: 20px;
   }
 
   .allBeers {
     background: yellow;
     margin: 0 2%;
+    border-radius: 10px;
+    padding: 0 0 2% 0;
 
     img {
       width: 100%;
+      border-radius: 10px 10px 0 0;
     }
   }
 
   .randomBeer {
     background: yellow;
     margin: 0 2%;
+    border-radius: 10px;
+    padding: 0 0 2% 0;
 
     img {
       width: 100%;
+      border-radius: 10px 10px 0 0;
     }
   }
+}
+
+.startLink {
+  font-size: 1.7rem;
+  text-decoration: none;
 }
 
 .BierContainerMain {
@@ -42,10 +53,13 @@
   padding: 3% 0;
   border-bottom: 1px solid black;
 
+
   .BierBild {
+
+
     img {
       width: 100px;
-      height: 230px;
+      height: 225px;
     }
   }
 
@@ -84,20 +98,19 @@
 }
 
 .bierZufall {
+  height: 100vh;
 
-  h1,
   p,
   h3 {
-    padding: 0 0 0 10%;
+    padding: 0 10% 0 10%;
   }
 
   .zufallBild {
     text-align: center;
-    padding: 10% 0 5% 0;
+    padding: 6% 0 6% 0;
 
     img {
       height: 300px;
-
     }
   }
 
@@ -115,12 +128,36 @@
     .detailOben {
       display: flex;
       justify-content: space-between;
+      padding: 0 0 1% 0;
     }
 
     .detailUnten {
       display: flex;
       justify-content: space-between;
-      padding: 0 0% 5% 0;
+      padding: 0 0% 7% 0;
     }
   }
+}
+
+.backButton {
+  display: block;
+  padding: 5% 0 75px 9%;
+}
+
+i {
+  color: gold;
+}
+
+.bottom {
+  position: fixed;
+  display: block;
+  height: 60px;
+  width: 100vw;
+  background: yellow;
+  text-align: center;
+  bottom: 0;
+}
+
+.mainContainer {
+  padding-bottom: 55px;
 }

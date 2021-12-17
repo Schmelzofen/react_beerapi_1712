@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import NavItem from "./NavItem"
 
-const BierTemp = ({ foto, marke, geschmack, produzent }) => {
+const BierTemp = ({ foto, marke, geschmack, produzent, id }) => {
     return (
         <div className="BierContainerMain">
             <div className="BierBild">
@@ -15,25 +15,13 @@ const BierTemp = ({ foto, marke, geschmack, produzent }) => {
                     <p>{geschmack}</p>
                     <p>{produzent}</p>
                 </div>
-                <button>Details</button>
+                <Link to={`/bieruebersicht/${id}`}><button>Details</button></Link>
             </div>
         </div>
     );
 }
 // Bild, Name, Slogan, Produzent, Detailseite(!) = /beers/:beerId
 
-const BierEinzel = () => {
-    let { id } = useParams()
-
-
-    let bData = this.state.beer.filter(elt => {
-        return elt.id.toString() === id.toString()
-    })
-    console.log(bData)
-    return (
-        <div><h1>Hello</h1></div>
-    );
-}
 
 class BierUebersicht extends Component {
     constructor(props) {
@@ -55,11 +43,13 @@ class BierUebersicht extends Component {
         return (
             <div className="mainContainer">
                 {this.state.beer.map(elt => <BierTemp
+                    id={elt._id}
                     key={uuidv4()}
                     foto={elt.image_url}
                     marke={elt.name}
                     geschmack={elt.tagline}
                 />)}
+                <NavItem />
             </div>
         )
     }
@@ -67,6 +57,5 @@ class BierUebersicht extends Component {
 
 export {
     BierUebersicht,
-    BierEinzel,
     BierTemp,
 }

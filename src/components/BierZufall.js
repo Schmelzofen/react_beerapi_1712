@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom"
-
+import NavItem from "./NavItem"
 
 class BierZufall extends React.Component {
     constructor(props) {
@@ -38,8 +38,9 @@ class BierZufall extends React.Component {
                         <p>{this.state.beer.attenuation_level}</p>
                     </div>
                     <h3>{this.state.beer.description}</h3>
-                    <Link to="/">Back</Link>
+                    <Link to="/" className="backButton"><i class="fas fa-arrow-circle-left fa-3x"></i></Link>
                 </div>
+                <NavItem />
             </div>
         )
     }

@@ -4,6 +4,7 @@ import './App.scss';
 import React, { Component } from 'react';
 import { BierUebersicht } from "./components/BierUebersicht"
 import BierZufall from "./components/BierZufall"
+import GetID from "./components/GetId"
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Route path="/" element={<Startseite />} />
           <Route path="/bieruebersicht" element={<BierUebersicht />} />
           <Route path="/bierzufall" element={<BierZufall />} />
+          <Route path="/bieruebersicht/:id" element={<GetID />} />
         </Routes>
       </Router>
     </div>
